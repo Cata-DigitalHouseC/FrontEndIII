@@ -1,8 +1,9 @@
 
 import './App.css' 
 import Card from './components/Card'
-import ClassComponent from './components/ClassComponent'
+import OtroClassComponent from './components/ClassComponent' /*Puedo usar otros nombres, el ya sabe que exportara y usara*/
 import FuncComponent  from './components/FuncComponent'
+import Home from './components/Home'
 
 function App() {
 
@@ -13,16 +14,21 @@ function App() {
   return (
 /*CON COMPONENTES*/
     <>
-      <ClassComponent />
+
+      <h1> Hola Mundo Clase 3</h1>    
+      <OtroClassComponent />
       <FuncComponent />
       <FuncComponent />
 
 
       
-      <h1> Titulo de Card: Elemento </h1>
+      <h1> Titulo de Card: Elemento Clase 4</h1>
       <Card elemento = {elementos[0]} /> {/*Elemento 1  */}
       <Card elemento = {elementos[1]} /> {/*Elemento 1  */}
       <Card elemento = {elementos[2]} /> {/*Elemento 1  */}
+
+      <h1> Titulo de Card: Elemento Clase 5</h1>
+      <Home/>
     </>
 
 

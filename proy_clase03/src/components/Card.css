@@ -1,13 +1,13 @@
 .card{
     width:300px;
     border: 3px solid beige;
-    margin-bottom: 10 px;
-    border-radius: 10 px;
+    margin-bottom: 10px;
+    border-radius: 10px;
     background-color: rgb(83,83,83);
 }
 
 .card-img{
-    width: 250 px;
-    height: 250 px;
+    width: 200px;
+    height: 250px;
     border-radius: 10px;
 }

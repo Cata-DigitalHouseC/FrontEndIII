@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LoginCard from './LoginCard'
 
 const Form = () => {
 
@@ -16,6 +17,8 @@ const Form = () => {
         alert('Tu nombre es '+persona.name + ' y cumplis ' + persona.bday)
         
     }
+
+    console.log(JSON.stringify(persona) + 'persona' )
   return (
     <>
          <form onSubmit = {(e) => handleSubmit(e)}> {/*<form onSubmit = {(e) => handleSubmit(event)}></form> */}
@@ -25,18 +28,11 @@ const Form = () => {
             <input type="text" placeholder="Cumple"  onChange = {(e) => setPersona({...persona, bday: e.target.value})}/>
             <button>Enviar</button>
         </form>
-
+        
         
 
-        {
-            show 
-            ?
-            <>
-                <h3>Tu nombre es {persona.name}</h3>
-                <h4>Cumplis en: {persona.bday}</h4>
-            </>
-            :
-            null
+        { /*Operador tenario en Js, por eso los {}*/
+            show ? <LoginCard user={persona}/> : null
 
         }
         {/* Equivalentemente puede ser */}

@@ -1,5 +1,6 @@
 import {describe, test} from "vitest"
 import {render, screen, fireEvent} from "@testing-library/react"
+import LoginForm from "../components/LoginForm"
 
 describe("Testeo LoginForm - render and events", () => {
     test("Debe renderizar el titulo", () => {
@@ -20,7 +21,7 @@ describe("Testeo LoginForm - render and events", () => {
     })
     test("Button must be rendered",()=>{
         const handleclick= vi.fn() //vi para hacer mocks de funciones, de mentiritas
-        render(<LoginForm handleclick={handleclick}/>)
+        render(<LoginForm handleClick={handleclick}/>)
         const button = screen.getByText("Ingresar")
         fireEvent.click(button)
         //expect(button).toBeDefined()

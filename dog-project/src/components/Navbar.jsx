@@ -19,12 +19,17 @@ const Navbar = () => {
         <Link to={routes.ingredientes}><h3>Ingredientes</h3></Link>
         <Link to={routes.contacto}><h3>Contacto</h3></Link>
         <Link to={routes.about}><h3>About</h3></Link>
+        <Link to={routes.vegetarians}>Vegetarianas</Link>
+        <Link to={routes.deserts}>Postres</Link>
+        <Link to={routes.recipes}>Recetas</Link>
 
-        <form onSubmit={handleSubmit}>
+
+
+        {/* <form onSubmit={handleSubmit}>
             <input type="text"/>
             <input type="text"/>
             <input type="text"/>
-        </form>
+        </form> */}
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import Card from '../components/Card'
 
 export const Home = () => {
 
@@ -17,14 +18,7 @@ export const Home = () => {
   return (
     <div>
         <h1>Recetas</h1>
-        {recipes.map(recipe => (
-            
-            <div key={recipe.id}>
-                <h3>{recipe.title}</h3>
-                <img src={recipe.image} alt={recipe.title} width={300}/>
-            </div>
-        ))}
-
+        {recipes.map(recipe => <Card key={recipe.id} recipe={recipe}/>)}
     </div>
   )
 }

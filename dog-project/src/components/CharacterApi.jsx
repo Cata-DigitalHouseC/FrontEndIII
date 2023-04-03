@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-conCharacterApi = () => {
+const CharacterApi = () => {
     const[character, setCharacter] = useState([]) //son estados, no variables
     const url = 'https://rickandmortyapi.com/api/character/1'
 
@@ -22,4 +22,4 @@ conCharacterApi = () => {
   )
 }
 
-export default Character
+export default CharacterApi

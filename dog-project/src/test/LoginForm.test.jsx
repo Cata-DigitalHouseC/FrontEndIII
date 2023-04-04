@@ -20,11 +20,11 @@ describe("Testeo LoginForm - render and events", () => {
         expect(pass.value).toBe("123") //el valor en un componente sea igual a...
     })
     test("Button must be rendered",()=>{
-        const handleclick= vi.fn() //vi para hacer mocks de funciones, de mentiritas
-        render(<LoginForm handleClick={handleclick}/>)
+        const handleClick= vi.fn() //vi para hacer mocks de funciones, de mentiritas
+        render(<LoginForm handleClick={handleClick}/>)
         const button = screen.getByText("Ingresar")
         fireEvent.click(button)
         //expect(button).toBeDefined()
-        expect(handleclick).toBeCalledTimes(1)
+        expect(handleClick).toBeCalledTimes(1)
     })
 })

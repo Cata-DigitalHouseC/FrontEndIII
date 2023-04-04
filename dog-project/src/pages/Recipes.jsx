@@ -1,12 +1,15 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import Card from '../components/Card'
 import { Link, Outlet } from 'react-router-dom'
+import { useRecipeStates } from '../Context/RecipeContext'
+import {RecipeStates} from '../Context/RecipeContext'
 
 
-const Recipes = ({recipes}) => {
+const Recipes = () => {
 
-
+  const {recipes} = useRecipeStates()
+  //const {recipes} = useContext(RecipeSates)
 
   return (
     <div>

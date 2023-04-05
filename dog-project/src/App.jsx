@@ -23,19 +23,25 @@ import { useEffect, useState } from 'react'
 
 
 function App() {
-
+  const auth= true;
   const handleClick = () => {}
 
 
   return (
     <div className="App">
+      {auth ? null: <Navbar/>}
       {/* <RandomDog/> */}
       {/* <Home/> */}
       {/* <CharacterApi/> */}
 
       {/* <LoginForm handleClick={handleClick}/> */}
-      <Navbar/>
+    
       <Routes>
+        {auth
+         ? 
+         <Route path='/' element={<LoginForm/>}/>
+         :
+         <>
         <Route path={routes.home} element={<Home/>}>
               <Route path={routes.vegetarians} element={<Vegetarians/>}>
                 <Route parth={routes.veggie} element={<Veggie/>}/>
@@ -51,7 +57,8 @@ function App() {
         <Route path={routes.about} element={<About/>}/>
         <Route path='*' element ={<NotFound/>}/>
 
-
+        </>
+        }
       </Routes>
 
 

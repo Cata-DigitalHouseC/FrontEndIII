@@ -20,6 +20,7 @@ import Veggie from './components/Veggie'
 import RecipeDetail from './components/RecipeDetail'
 import { useEffect, useState } from 'react'
 import { useRecipeStates } from './Context/RecipeContext'
+import Counter from './components/Counter'
 
 
 
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <div className="App">
+      <Counter/>
       {!token ? null: <Navbar/>}
       {/* <RandomDog/> */}
       {/* <Home/> */}

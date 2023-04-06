@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { routes } from '../routes'
+import { useRecipeStates } from '../Context/RecipeContext'
 
 const Navbar = () => {
+
+  const {setAuth} = useRecipeStates()
 
   const navigate = useNavigate()
   
@@ -11,6 +14,11 @@ const Navbar = () => {
         navigate('/success')
     }
     } 
+
+  const   logout = () => {
+    localStorage.removeItem('token') //clear limpia todo
+    setAuth(true)
+  }
 
   return (
     <div className='navbar'>
@@ -22,6 +30,7 @@ const Navbar = () => {
         <Link to={routes.vegetarians}>Vegetarianas</Link>
         <Link to={routes.deserts}>Postres</Link>
         <Link to={routes.recipes}>Recetas</Link>
+        <button onClick = {logout}>  Log Out </button>
 
 
 

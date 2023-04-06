@@ -19,17 +19,19 @@ import Deserts from './components/Deserts'
 import Veggie from './components/Veggie'
 import RecipeDetail from './components/RecipeDetail'
 import { useEffect, useState } from 'react'
+import { useRecipeStates } from './Context/RecipeContext'
 
 
 
 function App() {
   const auth= true;
+  const {token} = useRecipeStates()
   const handleClick = () => {}
 
 
   return (
     <div className="App">
-      {auth ? null: <Navbar/>}
+      {!token ? null: <Navbar/>}
       {/* <RandomDog/> */}
       {/* <Home/> */}
       {/* <CharacterApi/> */}
@@ -37,7 +39,7 @@ function App() {
       {/* <LoginForm handleClick={handleClick}/> */}
     
       <Routes>
-        {auth
+        {!token
          ? 
          <Route path='/' element={<LoginForm/>}/>
          :
